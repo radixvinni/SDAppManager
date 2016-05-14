@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_apps"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="Applications" />
+        <!--item
+            android:id="@+id/nav_fm"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="File manager" /-->
+    </group>
+
+    <item android:title="Settings">
+        <menu>
+            <item
+                android:id="@+id/nav_locations"
+                android:icon="@drawable/ic_menu_send"
+                android:title="SD locations" />
+            <!--item
+                android:id="@+id/nav_settings"
+                android:icon="@drawable/ic_menu_manage"
+                android:title="Settings" /-->
+        </menu>
+    </item>
+    <item android:title="Communicate">
+        <menu>
+            <item
+                android:id="@+id/nav_report"
+                android:icon="@drawable/ic_menu_manage"
+                android:title="Report a bug" />
+            <!--item
+                android:id="@+id/nav_share"
+                android:icon="@drawable/ic_menu_share"
+                android:title="Share" /-->
+        </menu>
+    </item>
+
+</menu>

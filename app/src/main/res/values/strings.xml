@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">SD App Manager</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="app_partition">Applications data storage</string>
+    <string name="cache_partition">Cache storage</string>
+    <string name="system_partition">System files storage</string>
+    <string name="ext_sd">External SD card</string>
+    <string name="sd_card">Internal SD card</string>
+    <string name="emulated">Emulated Storage</string>
+    <string name="unknown_location">Unknown storage</string>
+    <string name="action_transfer">Transfer</string>
+    <string name="sd_usb">USB flash drive</string>
+    <string name="app_apk">Apk file</string>
+    <string name="app_data">Application data</string>
+    <string name="app_native">Native libraries</string>
+    <string name="app_obb">Apk expantion files</string>
+</resources>
