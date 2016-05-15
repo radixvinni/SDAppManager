@@ -70,15 +70,18 @@ public class MainActivity extends AppCompatActivity
                         List<String> commands = new ArrayList<String>();
                         for(Application app: selected) {
                             for(Dir dir: app.children) {
-                                if (app.selection.contains(dir.name) && !app.selection_initial.contains(dir.name))
+                                if (app.selection.contains(dir.name) && !app.selection_initial.contains(dir.name)) {
                                     commands.add(DirectoryData.getLinkCommand(dir.path, newpath, dir.owner));
-
-                                if (!app.selection.contains(dir.name) && app.selection_initial.contains(dir.name))
+                                    dir.link = newpath + DirectoryData.dir + (new File(dir.path)).getName();
+                                }
+                                if (!app.selection.contains(dir.name) && app.selection_initial.contains(dir.name)) {
                                     commands.add(DirectoryData.getUnlinkCommand(dir.path, dir.link, dir.owner));
-
+                                    dir.link = null;
+                                }
                             }
                             app.selection_initial = new ArrayList<String>(app.selection);
                         }
+                        //for(String cmd: commands) System.out.println(cmd);
                         final File lock = DirectoryData.runBatch(commands, newpath);
                         selected.clear();
                         if (lock==null) {

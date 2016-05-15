@@ -98,7 +98,7 @@ public class DirectoryData extends HashMap<String, Dir> {
         }
     }
 
-    private static final String dir = File.separator + "mgr" + File.separator;
+    public static final String dir = File.separator + "mgr" + File.separator;
 
     public static String getLinkCommand(String from, String to, String owner) {
         if (owner==null) owner = "1000";
@@ -111,7 +111,7 @@ public class DirectoryData extends HashMap<String, Dir> {
 
     public static String getUnlinkCommand(String from, String to, String owner) {
         if (owner==null) owner = "system";
-        return "rm "+from+"\ncp -rp "+to+" "+from+"\nchown "+owner+":"+owner+" "+from+"\n";
+        return "rm "+from+"\ncp -rp "+to+" "+from+"\n";
     }
 
     public static File runBatch(List<String> commands, String to) {
